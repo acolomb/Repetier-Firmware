@@ -7039,6 +7039,7 @@ void setZOrigin( void )
 	//Printer::zLength -= Printer::currentPosition[Z_AXIS];
 
     Printer::currentPositionSteps[Z_AXIS] = 0;
+    Printer::coordinateOffset[Z_AXIS] = 0;
     Printer::updateDerivedParameter();
 #if NONLINEAR_SYSTEM
     transformCartesianStepsToDeltaSteps(Printer::currentPositionSteps, Printer::currentDeltaPositionSteps);
